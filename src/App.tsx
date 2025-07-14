@@ -92,13 +92,13 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {returnUrl && (
           <div className="mb-6 animate-fade-in">
             <button
               onClick={handleReturn}
-              className="flex items-center space-x-2 px-4 py-2 rounded-lg glass-card hover:bg-white/50 transition-all duration-300 text-gray-700 hover:text-indigo-600"
+              className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/80 backdrop-blur-lg border border-white/20 shadow-xl hover:bg-white/90 transition-all duration-300 text-gray-700 hover:text-indigo-600"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Return to previous page</span>
@@ -112,7 +112,7 @@ function App() {
             alt="Maggie the friendly dog reading a book" 
             className="w-20 h-20 rounded-full shadow-lg mr-6 border-4 border-white/50"
           />
-          <h1 className="text-5xl font-bold highlight-gradient bg-clip-text text-transparent leading-tight py-2">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight py-2">
             Ask Maggie Bible Questions
           </h1>
         </div>
@@ -129,12 +129,12 @@ function App() {
               onChange={(e) => setQuestion(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Ask your biblical question here..."
-              className="w-full p-6 pr-14 rounded-xl glass-card input-highlight min-h-[120px] resize-none text-lg shadow-2xl border-2 border-purple-200/50 hover:border-purple-300/70 focus:border-purple-400 transition-all duration-300 group-hover:shadow-purple-200/30"
+              className="w-full p-6 pr-14 rounded-xl bg-white/80 backdrop-blur-lg border border-white/20 shadow-xl focus:ring-4 focus:ring-purple-400/50 focus:border-transparent transition-all duration-300 min-h-[120px] resize-none text-lg border-2 border-purple-200/50 hover:border-purple-300/70 focus:border-purple-400 group-hover:shadow-purple-200/30"
             />
             <button
               type="submit"
               disabled={isLoading || !question.trim()}
-              className="absolute right-4 bottom-4 p-3 rounded-full highlight-gradient text-white disabled:opacity-50 transition-all duration-300 hover:shadow-lg hover:scale-110 disabled:hover:scale-100 shadow-lg"
+              className="absolute right-4 bottom-4 p-3 rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white disabled:opacity-50 transition-all duration-300 hover:shadow-lg hover:scale-110 disabled:hover:scale-100 shadow-lg"
             >
               <Send className="w-5 h-5" />
             </button>
@@ -162,19 +162,19 @@ function App() {
         )}
 
         {error && (
-          <div className="glass-card bg-red-50/50 text-red-600 rounded-xl p-6 mb-8 animate-fade-in">
+          <div className="bg-white/80 backdrop-blur-lg border border-white/20 shadow-xl bg-red-50/50 text-red-600 rounded-xl p-6 mb-8 animate-fade-in">
             {error}
           </div>
         )}
 
         {answer && (
           <div className="space-y-6 animate-fade-in">
-            <div className="glass-card rounded-xl p-8">
+            <div className="bg-white/80 backdrop-blur-lg border border-white/20 shadow-xl rounded-xl p-8">
               <p className="text-gray-800 leading-relaxed text-lg">{answer.text}</p>
             </div>
 
-            <div className="glass-card rounded-xl p-8">
-              <h2 className="text-2xl font-semibold mb-6 highlight-gradient bg-clip-text text-transparent">
+            <div className="bg-white/80 backdrop-blur-lg border border-white/20 shadow-xl rounded-xl p-8">
+              <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                 References & Resources
               </h2>
               <div className="space-y-4">
@@ -190,9 +190,9 @@ function App() {
                     href={ref.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-start p-4 rounded-xl reference-card"
+                    className="flex items-start p-4 rounded-xl hover:bg-white/50 hover:shadow-md transition-all duration-300"
                   >
-                    <div className="flex-shrink-0 reference-icon">
+                    <div className="flex-shrink-0 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-2 rounded-full text-white shadow-lg">
                       <ReferenceIcon type={ref.type} />
                     </div>
                     <div className="ml-4">

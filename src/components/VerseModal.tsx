@@ -13,9 +13,9 @@ export function VerseModal({ isOpen, onClose, title, content }: VerseModalProps)
 
   return (
     <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="glass-card rounded-xl max-w-2xl w-full max-h-[90vh] overflow-hidden animate-fade-in">
+      <div className="bg-white/80 backdrop-blur-lg border border-white/20 shadow-xl rounded-xl max-w-2xl w-full max-h-[90vh] overflow-hidden animate-fade-in">
         <div className="flex items-center justify-between p-6 border-b border-white/20">
-          <h3 className="text-xl font-semibold highlight-gradient bg-clip-text text-transparent">{title}</h3>
+          <h3 className="text-xl font-semibold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">{title}</h3>
           <button
             onClick={onClose}
             className="p-2 rounded-full hover:bg-white/50 transition-all duration-300"
