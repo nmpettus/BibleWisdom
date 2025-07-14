@@ -92,7 +92,7 @@ function App() {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
       padding: '2rem 1rem'
     }}>
       <div style={{
@@ -143,23 +143,24 @@ function App() {
             src="/MaggieRead.jpeg" 
             alt="Maggie the friendly dog reading a book" 
             style={{
-              width: '5rem',
-              height: '5rem',
+              width: '4rem',
+              height: '4rem',
               borderRadius: '50%',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
               marginRight: '1.5rem',
-              border: '4px solid rgba(255, 255, 255, 0.5)'
+              border: '3px solid rgba(255, 255, 255, 0.8)'
             }}
           />
           <h1 style={{
-            fontSize: '3rem',
+            fontSize: '2.5rem',
             fontWeight: 'bold',
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #e2e8f0 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             lineHeight: '1.2',
-            padding: '0.5rem 0'
+            padding: '0.5rem 0',
+            textShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'
           }}>
             Ask Maggie Bible Questions
           </h1>
@@ -168,11 +169,12 @@ function App() {
         <p style={{
           textAlign: 'center',
           fontSize: '1.125rem',
-          color: 'rgba(255, 255, 255, 0.9)',
+          color: 'rgba(255, 255, 255, 0.95)',
           marginBottom: '2rem',
           maxWidth: '48rem',
           margin: '0 auto 2rem auto',
-          lineHeight: '1.6'
+          lineHeight: '1.6',
+          textShadow: '0 1px 2px rgba(0, 0, 0, 0.1)'
         }}>
           Answers are based on the New Testament covenant of Grace and God's Love as taught by Tim Keller, Andrew Farley, and others.
         </p>
@@ -189,10 +191,10 @@ function App() {
                 width: '100%',
                 padding: '1.5rem 3.5rem 1.5rem 1.5rem',
                 borderRadius: '0.75rem',
-                background: 'rgba(255, 255, 255, 0.9)',
-                backdropFilter: 'blur(10px)',
-                border: '2px solid rgba(255, 255, 255, 0.2)',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
+                background: 'rgba(255, 255, 255, 0.95)',
+                backdropFilter: 'blur(16px)',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
+                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.15)',
                 minHeight: '7.5rem',
                 resize: 'none',
                 fontSize: '1.125rem',
@@ -200,12 +202,12 @@ function App() {
                 transition: 'all 0.3s ease'
               }}
               onFocus={(e) => {
-                e.target.style.boxShadow = '0 0 0 4px rgba(139, 92, 246, 0.3), 0 8px 32px rgba(0, 0, 0, 0.1)';
-                e.target.style.borderColor = 'rgba(139, 92, 246, 0.5)';
+                e.target.style.boxShadow = '0 0 0 3px rgba(139, 92, 246, 0.4), 0 20px 40px rgba(0, 0, 0, 0.15)';
+                e.target.style.borderColor = 'rgba(139, 92, 246, 0.6)';
               }}
               onBlur={(e) => {
-                e.target.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
-                e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                e.target.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
+                e.target.style.borderColor = 'rgba(255, 255, 255, 0.3)';
               }}
             />
             <button
@@ -217,23 +219,23 @@ function App() {
                 bottom: '1rem',
                 padding: '0.75rem',
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
                 color: 'white',
                 border: 'none',
                 cursor: isLoading || !question.trim() ? 'not-allowed' : 'pointer',
                 opacity: isLoading || !question.trim() ? 0.5 : 1,
                 transition: 'all 0.3s ease',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)'
               }}
               onMouseOver={(e) => {
                 if (!isLoading && question.trim()) {
                   e.currentTarget.style.transform = 'scale(1.1)';
-                  e.currentTarget.style.boxShadow = '0 6px 8px rgba(0, 0, 0, 0.15)';
+                  e.currentTarget.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.3)';
                 }
               }}
               onMouseOut={(e) => {
                 e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                e.currentTarget.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';
               }}
             >
               <Send className="w-5 h-5" />
@@ -302,10 +304,10 @@ function App() {
         {answer && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div style={{
-              background: 'rgba(255, 255, 255, 0.9)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
+              background: 'rgba(255, 255, 255, 0.95)',
+              backdropFilter: 'blur(16px)',
+              border: '1px solid rgba(255, 255, 255, 0.3)',
+              boxShadow: '0 20px 40px rgba(0, 0, 0, 0.15)',
               borderRadius: '0.75rem',
               padding: '2rem'
             }}>
@@ -319,98 +321,5 @@ function App() {
             </div>
 
             <div style={{
-              background: 'rgba(255, 255, 255, 0.9)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
-              borderRadius: '0.75rem',
-              padding: '2rem'
-            }}>
-              <h2 style={{
-                fontSize: '1.5rem',
-                fontWeight: '600',
-                marginBottom: '1.5rem',
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
-              }}>
-                References & Resources
-              </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                {answer.references.map((ref, index) => (
-                  <a
-                    onClick={(e) => {
-                      if (ref.type === 'verse') {
-                        e.preventDefault();
-                        handleVerseClick(ref);
-                      }
-                    }}
-                    key={index}
-                    href={ref.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      padding: '1rem',
-                      borderRadius: '0.75rem',
-                      transition: 'all 0.3s ease',
-                      textDecoration: 'none',
-                      cursor: 'pointer'
-                    }}
-                    onMouseOver={(e) => {
-                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.5)';
-                      e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-                    }}
-                    onMouseOut={(e) => {
-                      e.currentTarget.style.background = 'transparent';
-                      e.currentTarget.style.boxShadow = 'none';
-                    }}
-                  >
-                    <div style={{
-                      flexShrink: 0,
-                      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                      padding: '0.5rem',
-                      borderRadius: '50%',
-                      color: 'white',
-                      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-                    }}>
-                      <ReferenceIcon type={ref.type} />
-                    </div>
-                    <div style={{ marginLeft: '1rem' }}>
-                      <h3 style={{
-                        fontWeight: '500',
-                        color: '#111827',
-                        transition: 'color 0.2s ease'
-                      }}>
-                        {ref.title}
-                      </h3>
-                      {ref.description && (
-                        <p style={{
-                          fontSize: '0.875rem',
-                          color: '#6b7280'
-                        }}>
-                          {ref.description}
-                        </p>
-                      )}
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        <VerseModal
-          isOpen={selectedVerse !== null}
-          onClose={() => setSelectedVerse(null)}
-          title={selectedVerse?.title || ''}
-          content={selectedVerse?.content || ''}
-        />
-      </div>
-    </div>
-  );
-}
-
-export default App;
+              background: 'rgba(255, 255, 255, 0.95)',
+              backdropFilter: 'blur(16px)',

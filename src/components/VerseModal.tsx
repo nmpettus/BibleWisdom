@@ -12,19 +12,74 @@ export function VerseModal({ isOpen, onClose, title, content }: VerseModalProps)
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-white/80 backdrop-blur-lg border border-white/20 shadow-xl rounded-xl max-w-2xl w-full max-h-[90vh] overflow-hidden animate-fade-in">
-        <div className="flex items-center justify-between p-6 border-b border-white/20">
-          <h3 className="text-xl font-semibold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">{title}</h3>
+    <div style={{
+      position: 'fixed',
+      inset: 0,
+      background: 'rgba(0, 0, 0, 0.5)',
+      backdropFilter: 'blur(8px)',
+      zIndex: 50,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '1rem'
+    }}>
+      <div style={{
+        background: 'rgba(255, 255, 255, 0.95)',
+        backdropFilter: 'blur(20px)',
+        border: '1px solid rgba(255, 255, 255, 0.3)',
+        boxShadow: '0 25px 50px rgba(0, 0, 0, 0.25)',
+        borderRadius: '1rem',
+        maxWidth: '42rem',
+        width: '100%',
+        maxHeight: '90vh',
+        overflow: 'hidden',
+        animation: 'fade-in 0.3s ease-out'
+      }}>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '1.5rem',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.2)'
+        }}>
+          <h3 style={{
+            fontSize: '1.25rem',
+            fontWeight: '600',
+            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}>{title}</h3>
           <button
             onClick={onClose}
-            className="p-2 rounded-full hover:bg-white/50 transition-all duration-300"
+            style={{
+              padding: '0.5rem',
+              borderRadius: '50%',
+              background: 'transparent',
+              border: 'none',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.5)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.background = 'transparent';
+            }}
           >
-            <X className="w-5 h-5 text-gray-500" />
+            <X style={{ width: '1.25rem', height: '1.25rem', color: '#6b7280' }} />
           </button>
         </div>
-        <div className="p-8 overflow-y-auto max-h-[calc(90vh-8rem)]">
-          <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700">
+        <div style={{
+          padding: '2rem',
+          overflowY: 'auto',
+          maxHeight: 'calc(90vh - 8rem)'
+        }}>
+          <div style={{
+            fontSize: '1.125rem',
+            lineHeight: '1.7',
+            color: '#374151'
+          }}>
             {content}
           </div>
         </div>
