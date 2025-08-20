@@ -320,6 +320,101 @@ function App() {
               </p>
             </div>
 
-            <div style={{
-              background: 'rgba(255, 255, 255, 0.95)',
-              backdropFilter: 'blur(16px)',
+            {answer.references && answer.references.length > 0 && (
+              <div style={{
+                background: 'rgba(255, 255, 255, 0.95)',
+                backdropFilter: 'blur(16px)',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
+                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.15)',
+                borderRadius: '0.75rem',
+                padding: '2rem'
+              }}>
+                <h3 style={{
+                  fontSize: '1.25rem',
+                  fontWeight: '600',
+                  color: '#1f2937',
+                  marginBottom: '1rem'
+                }}>
+                  References
+                </h3>
+                <div style={{
+                  display: 'grid',
+                  gap: '0.75rem'
+                }}>
+                  {answer.references.map((ref, index) => (
+                    <div
+                      key={index}
+                      onClick={() => ref.type === 'verse' ? handleVerseClick(ref) : window.open(ref.link, '_blank')}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.75rem',
+                        padding: '1rem',
+                        borderRadius: '0.5rem',
+                        background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(219, 39, 119, 0.1) 100%)',
+                        border: '1px solid rgba(139, 92, 246, 0.2)',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease'
+                      }}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.background = 'linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(219, 39, 119, 0.2) 100%)';
+                        e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.4)';
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.1)';
+                      }}
+                      onMouseOut={(e) => {
+                        e.currentTarget.style.background = 'linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(219, 39, 119, 0.1) 100%)';
+                        e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.2)';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}
+                    >
+                      <div style={{
+                        padding: '0.5rem',
+                        borderRadius: '0.375rem',
+                        background: 'linear-gradient(135deg, #8b5cf6 0%, #db2777 100%)',
+                        color: 'white',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}>
+                        <ReferenceIcon type={ref.type} />
+                      </div>
+                      <div style={{ flex: 1 }}>
+                        <h4 style={{
+                          fontSize: '1rem',
+                          fontWeight: '500',
+                          color: '#1f2937',
+                          marginBottom: '0.25rem'
+                        }}>
+                          {ref.title}
+                        </h4>
+                        {ref.description && (
+                          <p style={{
+                            fontSize: '0.875rem',
+                            color: '#6b7280'
+                          }}>
+                            {ref.description}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
+      {selectedVerse && (
+        <VerseModal
+          verse={selectedVerse}
+          onClose={() => setSelectedVerse(null)}
+        />
+      )}
+    </div>
+  );
+}
+
+export default App;
