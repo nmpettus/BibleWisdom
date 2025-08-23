@@ -183,6 +183,10 @@ function App() {
           padding: '0.75rem 1rem',
           borderRadius: '1rem',
           boxShadow: '0 2px 8px rgba(75, 0, 130, 0.2)'
+          background: 'rgba(255, 255, 255, 0.8)',
+          padding: '0.75rem 1rem',
+          borderRadius: '1rem',
+          boxShadow: '0 2px 8px rgba(75, 0, 130, 0.2)'
         }}>
           ✨ Get fun Bible answers that show how much God loves you! ✨
         </p>
@@ -273,6 +277,10 @@ function App() {
                 padding: '0.5rem 1rem',
                 borderRadius: '1rem',
                 boxShadow: '0 2px 8px rgba(75, 0, 130, 0.2)'
+                background: 'rgba(255, 255, 255, 0.98)',
+                padding: '0.5rem 1rem',
+                borderRadius: '1rem',
+                boxShadow: '0 2px 8px rgba(75, 0, 130, 0.2)'
               }}>
                 🤔 Maggie is thinking... 🐾
               </p>
@@ -314,6 +322,8 @@ function App() {
             marginBottom: '1.5rem',
             fontSize: '0.95rem',
             fontWeight: '500'
+            fontSize: '0.95rem',
+            fontWeight: '500'
           }}>
             😟 Oops! {error}
           </div>
@@ -322,15 +332,16 @@ function App() {
         {answer && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <div style={{
-              background: 'rgba(255, 255, 255, 0.95)',
               border: '1px solid rgba(255, 255, 255, 0.3)',
               border: '1px solid rgba(74, 144, 226, 0.2)',
               boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
               borderRadius: '0.75rem',
               padding: '1.25rem'
-            }}>
-              <p style={{
-                color: '#374151',
+                border: '2px solid #FF69B4',
+                boxShadow: '0 4px 16px rgba(255, 105, 180, 0.3)',
+                color: '#FF1493',
+                fontWeight: '600',
+                fontSize: '0.9rem',
                 lineHeight: '1.5',
                 fontSize: '1rem',
                 fontWeight: '400'
@@ -343,9 +354,9 @@ function App() {
               <div style={{
                 background: 'white',
                 backdropFilter: 'blur(16px)',
-                border: '1px solid rgba(74, 144, 226, 0.2)',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
-                borderRadius: '0.75rem',
+                border: '3px solid #FFB6C1',
+                boxShadow: '0 8px 24px rgba(255, 182, 193, 0.4)',
+                minHeight: '5rem',
                 padding: '1.25rem'
               }}>
                 <h3 style={{
@@ -382,17 +393,21 @@ function App() {
                         e.currentTarget.style.boxShadow = '0 2px 8px rgba(74, 144, 226, 0.15)';
                       }}
                       onMouseOut={(e) => {
-                        e.currentTarget.style.background = 'rgba(74, 144, 226, 0.05)';
+                fontSize: '1rem',
+                fontWeight: '500',
+                color: '#4B0082',
                         e.currentTarget.style.borderColor = 'rgba(74, 144, 226, 0.15)';
                         e.currentTarget.style.transform = 'translateY(0)';
                         e.currentTarget.style.boxShadow = 'none';
                       }}
-                    >
-                      <div style={{
+                e.target.style.boxShadow = '0 0 0 3px rgba(255, 105, 180, 0.5), 0 8px 24px rgba(255, 182, 193, 0.4)';
+                e.target.style.borderColor = '#FF69B4';
+                e.target.style.transform = 'scale(1.02)';
                         padding: '0.375rem',
                         borderRadius: '0.375rem',
-                        background: 'linear-gradient(135deg, #4A90E2 0%, #2563EB 100%)',
-                        color: 'white',
+                e.target.style.boxShadow = '0 8px 24px rgba(255, 182, 193, 0.4)';
+                e.target.style.borderColor = '#FFB6C1';
+                e.target.style.transform = 'scale(1)';
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -400,28 +415,30 @@ function App() {
                         <ReferenceIcon type={ref.type} />
                       </div>
                       <div style={{ flex: 1 }}>
-                        <h4 style={{
-                          fontSize: '0.9rem',
-                          fontWeight: '600',
+                right: '0.75rem',
+                bottom: '0.75rem',
+                padding: '0.6rem',
                           color: '#374151',
-                          marginBottom: '0.125rem'
+                background: 'linear-gradient(135deg, #FF69B4 0%, #FF1493 50%, #DC143C 100%)',
                         }}>
                           {ref.title}
                         </h4>
                         {ref.description && (
                           <p style={{
-                            fontSize: '0.8rem',
+                boxShadow: '0 4px 12px rgba(255, 105, 180, 0.4)'
                             color: '#6B7280',
-                            lineHeight: '1.3'
-                          }}>
-                            {ref.description}
+                e.currentTarget.style.background = '#FF69B4';
+                e.currentTarget.style.color = 'white';
+                  e.currentTarget.style.transform = 'scale(1.15)';
+                  e.currentTarget.style.boxShadow = '0 6px 16px rgba(255, 105, 180, 0.6)';
                           </p>
-                        )}
-                      </div>
-                    </div>
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.95)';
+                e.currentTarget.style.color = '#FF1493';
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 105, 180, 0.4)';
                   ))}
                 </div>
-              </div>
+              <Send className="w-4 h-4" />
             )}
           </div>
         )}
