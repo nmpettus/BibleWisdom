@@ -23,7 +23,7 @@ const VERIFIED_BOOKS = {
   'The Action Bible': 'https://www.amazon.com/Action-Bible-Gods-Redemptive-Unfolds/dp/0781444993',
   'My First Bible': 'https://www.amazon.com/First-Bible-Kenneth-Taylor/dp/0842321810',
   'Read and Share Bible': 'https://www.amazon.com/Read-Share-Bible-Gwen-Ellis/dp/1400308410',
-  'Spark Story Bible': 'https://www.amazon.com/Spark-Story-Bible-Deborah-ONeill/dp/0806656077',
+  'Spark Story Bible': 'https://www.amazon.com/Spark-Story-Bible-Deborah-ONeill/dp/0806656077'
 };
 
 // Verified article sources
@@ -132,7 +132,7 @@ When answering questions about the Bible, Christianity, or theology:
 11. Keep responses warm, encouraging, and age-appropriate
 12. Every answer should help kids feel loved by God and excited about their faith
 13. Never allow profanity, sexual inuendos, racist oe ethenic language
-14. Never allow violent, bomb related comments, explosive talk or political talk ';
+14. Never allow violent, bomb related comments, explosive talk or political talk`;
 
 export interface AIResponse {
   text: string;
@@ -177,7 +177,7 @@ export async function getAnswer(question: string): Promise<AIResponse> {
         // Remove any non-JSON text before or after the JSON object
         .replace(/^[^{]*({[\s\S]*})[^}]*$/, '$1')
         // Remove code block markers
-        .replace(/```json\s*|\s*```/g, '')
+        .replace(/``\`json\s*|\s*```/g, '')
         // Remove control characters
         .replace(/[\u0000-\u001F]+/g, ' ')
         .trim();
