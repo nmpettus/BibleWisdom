@@ -324,17 +324,16 @@ function App() {
             <div style={{
               background: 'rgba(255, 255, 255, 0.98)',
               backdropFilter: 'blur(16px)',
-              border: '3px solid #FFB6C1',
-              boxShadow: '0 8px 24px rgba(255, 182, 193, 0.4)',
+              border: '2px solid #FF69B4',
+              boxShadow: '0 4px 16px rgba(255, 105, 180, 0.3)',
               borderRadius: '1rem',
-              padding: '1.5rem'
+              padding: '1.25rem'
             }}>
               <p style={{
-                fontSize: '1rem',
-                fontWeight: '500',
                 color: '#4B0082',
                 lineHeight: '1.5',
-                margin: 0
+                fontSize: '1rem',
+                fontWeight: '500'
               }}>
                 {answer.text}
               </p>
@@ -402,9 +401,9 @@ function App() {
                       <div style={{ flex: 1 }}>
                         <h4 style={{
                           fontSize: '0.875rem',
-                          fontWeight: '500',
+                          fontWeight: '600',
                           color: '#374151',
-                          margin: 0
+                          marginBottom: '0.125rem'
                         }}>
                           {ref.title}
                         </h4>
@@ -412,7 +411,7 @@ function App() {
                           <p style={{
                             fontSize: '0.75rem',
                             color: '#6B7280',
-                            margin: '0.25rem 0 0 0'
+                            margin: 0
                           }}>
                             {ref.description}
                           </p>
