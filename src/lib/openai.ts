@@ -130,7 +130,9 @@ When answering questions about the Bible, Christianity, or theology:
    - God sees us as His special children
    - We can talk to God anytime because He loves us
 11. Keep responses warm, encouraging, and age-appropriate
-12. Every answer should help kids feel loved by God and excited about their faith`;
+12. Every answer should help kids feel loved by God and excited about their faith
+13. Never allow profanity, sexual inuendos, racist oe ethenic language
+14. Never allow violent, bomb related comments, explosive talk or political talk ';
 
 export interface AIResponse {
   text: string;
