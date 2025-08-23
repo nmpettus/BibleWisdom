@@ -183,10 +183,6 @@ function App() {
           padding: '0.75rem 1rem',
           borderRadius: '1rem',
           boxShadow: '0 2px 8px rgba(75, 0, 130, 0.2)'
-          background: 'rgba(255, 255, 255, 0.8)',
-          padding: '0.75rem 1rem',
-          borderRadius: '1rem',
-          boxShadow: '0 2px 8px rgba(75, 0, 130, 0.2)'
         }}>
           ✨ Get fun Bible answers that show how much God loves you! ✨
         </p>
@@ -273,10 +269,6 @@ function App() {
                 fontWeight: '600',
                 color: '#4B0082',
                 marginBottom: '0.5rem',
-                background: 'rgba(255, 255, 255, 0.9)',
-                padding: '0.5rem 1rem',
-                borderRadius: '1rem',
-                boxShadow: '0 2px 8px rgba(75, 0, 130, 0.2)'
                 background: 'rgba(255, 255, 255, 0.98)',
                 padding: '0.5rem 1rem',
                 borderRadius: '1rem',
@@ -322,8 +314,6 @@ function App() {
             marginBottom: '1.5rem',
             fontSize: '0.95rem',
             fontWeight: '500'
-            fontSize: '0.95rem',
-            fontWeight: '500'
           }}>
             😟 Oops! {error}
           </div>
@@ -332,19 +322,18 @@ function App() {
         {answer && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <div style={{
-              border: '1px solid rgba(255, 255, 255, 0.3)',
-              border: '1px solid rgba(74, 144, 226, 0.2)',
-              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
-              borderRadius: '0.75rem',
+              background: 'rgba(255, 255, 255, 0.98)',
+              backdropFilter: 'blur(16px)',
+              border: '2px solid #FF69B4',
+              boxShadow: '0 4px 16px rgba(255, 105, 180, 0.3)',
+              borderRadius: '1rem',
               padding: '1.25rem'
-                border: '2px solid #FF69B4',
-                boxShadow: '0 4px 16px rgba(255, 105, 180, 0.3)',
-                color: '#FF1493',
-                fontWeight: '600',
-                fontSize: '0.9rem',
+            }}>
+              <p style={{
+                color: '#4B0082',
                 lineHeight: '1.5',
                 fontSize: '1rem',
-                fontWeight: '400'
+                fontWeight: '500'
               }}>
                 {answer.text}
               </p>
@@ -352,11 +341,11 @@ function App() {
 
             {answer.references && answer.references.length > 0 && (
               <div style={{
-                background: 'white',
+                background: 'rgba(255, 255, 255, 0.98)',
                 backdropFilter: 'blur(16px)',
                 border: '3px solid #FFB6C1',
                 boxShadow: '0 8px 24px rgba(255, 182, 193, 0.4)',
-                minHeight: '5rem',
+                borderRadius: '1rem',
                 padding: '1.25rem'
               }}>
                 <h3 style={{
@@ -393,21 +382,16 @@ function App() {
                         e.currentTarget.style.boxShadow = '0 2px 8px rgba(74, 144, 226, 0.15)';
                       }}
                       onMouseOut={(e) => {
-                fontSize: '1rem',
-                fontWeight: '500',
-                color: '#4B0082',
+                        e.currentTarget.style.background = 'rgba(74, 144, 226, 0.05)';
                         e.currentTarget.style.borderColor = 'rgba(74, 144, 226, 0.15)';
                         e.currentTarget.style.transform = 'translateY(0)';
                         e.currentTarget.style.boxShadow = 'none';
                       }}
-                e.target.style.boxShadow = '0 0 0 3px rgba(255, 105, 180, 0.5), 0 8px 24px rgba(255, 182, 193, 0.4)';
-                e.target.style.borderColor = '#FF69B4';
-                e.target.style.transform = 'scale(1.02)';
+                    >
+                      <div style={{
                         padding: '0.375rem',
                         borderRadius: '0.375rem',
-                e.target.style.boxShadow = '0 8px 24px rgba(255, 182, 193, 0.4)';
-                e.target.style.borderColor = '#FFB6C1';
-                e.target.style.transform = 'scale(1)';
+                        background: 'rgba(74, 144, 226, 0.1)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -415,30 +399,28 @@ function App() {
                         <ReferenceIcon type={ref.type} />
                       </div>
                       <div style={{ flex: 1 }}>
-                right: '0.75rem',
-                bottom: '0.75rem',
-                padding: '0.6rem',
+                        <h4 style={{
+                          fontSize: '0.875rem',
+                          fontWeight: '600',
                           color: '#374151',
-                background: 'linear-gradient(135deg, #FF69B4 0%, #FF1493 50%, #DC143C 100%)',
+                          marginBottom: '0.125rem'
                         }}>
                           {ref.title}
                         </h4>
                         {ref.description && (
                           <p style={{
-                boxShadow: '0 4px 12px rgba(255, 105, 180, 0.4)'
+                            fontSize: '0.75rem',
                             color: '#6B7280',
-                e.currentTarget.style.background = '#FF69B4';
-                e.currentTarget.style.color = 'white';
-                  e.currentTarget.style.transform = 'scale(1.15)';
-                  e.currentTarget.style.boxShadow = '0 6px 16px rgba(255, 105, 180, 0.6)';
+                            margin: 0
+                          }}>
+                            {ref.description}
                           </p>
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.95)';
-                e.currentTarget.style.color = '#FF1493';
-                e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 105, 180, 0.4)';
+                        )}
+                      </div>
+                    </div>
                   ))}
                 </div>
-              <Send className="w-4 h-4" />
+              </div>
             )}
           </div>
         )}
