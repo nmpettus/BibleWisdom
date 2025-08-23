@@ -324,8 +324,8 @@ function App() {
             <div style={{
               background: 'rgba(255, 255, 255, 0.98)',
               backdropFilter: 'blur(16px)',
-              border: '3px solid #FFB6C1',
-              boxShadow: '0 8px 24px rgba(255, 182, 193, 0.4)',
+              border: '2px solid #FF69B4',
+              boxShadow: '0 4px 16px rgba(255, 105, 180, 0.3)',
               borderRadius: '1rem',
               padding: '1.25rem'
             }}>
@@ -333,7 +333,7 @@ function App() {
                 color: '#4B0082',
                 lineHeight: '1.5',
                 fontSize: '1rem',
-                fontWeight: '500'
+                fontWeight: '400'
               }}>
                 {answer.text}
               </p>
@@ -351,7 +351,7 @@ function App() {
                 <h3 style={{
                   fontSize: '1.125rem',
                   fontWeight: '600',
-                  color: '#4B0082',
+                  color: '#1E40AF',
                   marginBottom: '0.75rem'
                 }}>
                   References
@@ -370,20 +370,20 @@ function App() {
                         gap: '0.625rem',
                         padding: '0.75rem',
                         borderRadius: '0.5rem',
-                        background: 'rgba(255, 182, 193, 0.1)',
-                        border: '1px solid rgba(255, 182, 193, 0.3)',
+                        background: 'rgba(74, 144, 226, 0.05)',
+                        border: '1px solid rgba(74, 144, 226, 0.15)',
                         cursor: 'pointer',
                         transition: 'all 0.3s ease'
                       }}
                       onMouseOver={(e) => {
-                        e.currentTarget.style.background = 'rgba(255, 182, 193, 0.2)';
-                        e.currentTarget.style.borderColor = 'rgba(255, 182, 193, 0.5)';
+                        e.currentTarget.style.background = 'rgba(74, 144, 226, 0.1)';
+                        e.currentTarget.style.borderColor = 'rgba(74, 144, 226, 0.3)';
                         e.currentTarget.style.transform = 'translateY(-1px)';
-                        e.currentTarget.style.boxShadow = '0 2px 8px rgba(255, 182, 193, 0.3)';
+                        e.currentTarget.style.boxShadow = '0 2px 8px rgba(74, 144, 226, 0.15)';
                       }}
                       onMouseOut={(e) => {
-                        e.currentTarget.style.background = 'rgba(255, 182, 193, 0.1)';
-                        e.currentTarget.style.borderColor = 'rgba(255, 182, 193, 0.3)';
+                        e.currentTarget.style.background = 'rgba(74, 144, 226, 0.05)';
+                        e.currentTarget.style.borderColor = 'rgba(74, 144, 226, 0.15)';
                         e.currentTarget.style.transform = 'translateY(0)';
                         e.currentTarget.style.boxShadow = 'none';
                       }}
@@ -391,7 +391,7 @@ function App() {
                       <div style={{
                         padding: '0.375rem',
                         borderRadius: '0.375rem',
-                        background: 'rgba(255, 105, 180, 0.1)',
+                        background: 'rgba(74, 144, 226, 0.1)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -402,7 +402,7 @@ function App() {
                         <h4 style={{
                           fontSize: '0.875rem',
                           fontWeight: '500',
-                          color: '#4B0082',
+                          color: '#374151',
                           marginBottom: '0.125rem'
                         }}>
                           {ref.title}
