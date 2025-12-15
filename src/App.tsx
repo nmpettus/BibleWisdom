@@ -1,9 +1,10 @@
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';
-import { Send, Book, GraduationCap, MessageCircle, ExternalLink, ArrowLeft } from 'lucide-react';
+import { Send, Book, GraduationCap, MessageCircle, ExternalLink, ArrowLeft, Sparkles } from 'lucide-react';
 import { getAnswer } from './lib/openai';
 import { getVerseContent } from './lib/bible';
 import { VerseModal } from './components/VerseModal';
+import PixelExplorer from './components/PixelExplorer';
 
 interface Reference {
   type: 'verse' | 'book' | 'commentary' | 'article';
@@ -18,6 +19,7 @@ interface Answer {
 }
 
 function App() {
+  const [currentApp, setCurrentApp] = useState<'bible' | 'pixel'>('bible');
   const [question, setQuestion] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [answer, setAnswer] = useState<Answer | null>(null);
@@ -89,6 +91,11 @@ function App() {
     }
   };
 
+  // If Pixel Explorer is active, render it directly
+  if (currentApp === 'pixel') {
+    return <PixelExplorer onBack={() => setCurrentApp('bible')} />;
+  }
+
   return (
     <div style={{
       minHeight: '100vh',
@@ -100,8 +107,14 @@ function App() {
         margin: '0 auto',
         padding: '0 0.5rem'
       }}>
-        {returnUrl && (
-          <div style={{ marginBottom: '1rem' }}>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: '1rem',
+          gap: '1rem'
+        }}>
+          {returnUrl && (
             <button
               onClick={handleReturn}
               style={{
@@ -134,8 +147,39 @@ function App() {
               <ArrowLeft className="w-4 h-4" />
               <span>← Back</span>
             </button>
-          </div>
-        )}
+          )}
+
+          <button
+            onClick={() => setCurrentApp('pixel')}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              padding: '0.5rem 1rem',
+              borderRadius: '1rem',
+              background: 'linear-gradient(135deg, #9333ea, #7e22ce)',
+              border: '2px solid white',
+              boxShadow: '0 4px 16px rgba(147, 51, 234, 0.4)',
+              color: 'white',
+              fontWeight: '600',
+              fontSize: '0.9rem',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease',
+              marginLeft: !returnUrl ? '0' : 'auto'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = 'scale(1.05)';
+              e.currentTarget.style.boxShadow = '0 6px 20px rgba(147, 51, 234, 0.6)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.boxShadow = '0 4px 16px rgba(147, 51, 234, 0.4)';
+            }}
+          >
+            <Sparkles className="w-4 h-4" />
+            <span>Pixel Explorer</span>
+          </button>
+        </div>
         
         <div style={{
           display: 'flex',
