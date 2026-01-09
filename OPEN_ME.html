@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Timeline - Setup Instructions</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: #f8fafc;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+        .step {
+            background: #f1f5f9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #60a5fa;
+        }
+        code {
+            background: #1e293b;
+            color: #60a5fa;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        .important {
+            background: #fef3c7;
+            border-left-color: #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+        }
+        a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 Health Timeline App</h1>
+        <p class="subtitle">Your health tracking application is ready!</p>
+
+        <div class="important">
+            <strong>⚠️ You're in a Remote Environment</strong><br>
+            Since you're using Claude Code in a browser, you can't access localhost directly.
+            Follow the instructions below to access your app.
+        </div>
+
+        <h2>Option 1: Use GitHub (Recommended)</h2>
+        <div class="step">
+            <strong>Step 1:</strong> Your code is already pushed to GitHub branch:<br>
+            <code>claude/health-timeline-setup-y2yri</code>
+        </div>
+        <div class="step">
+            <strong>Step 2:</strong> Clone the repository to your local computer:<br>
+            <code>git clone https://github.com/nmpettus/BibleWisdom.git</code>
+        </div>
+        <div class="step">
+            <strong>Step 3:</strong> Switch to the branch:<br>
+            <code>git checkout claude/health-timeline-setup-y2yri</code>
+        </div>
+        <div class="step">
+            <strong>Step 4:</strong> Install and run:<br>
+            <code>npm install</code><br>
+            <code>npm run dev</code>
+        </div>
+        <div class="step">
+            <strong>Step 5:</strong> Open in your browser:<br>
+            <code>http://localhost:5173</code>
+        </div>
+
+        <h2>Option 2: Deploy to GitHub Pages</h2>
+        <div class="step">
+            Go back to Claude Code and ask me to:<br>
+            <strong>"Deploy the Health Timeline app to GitHub Pages"</strong><br><br>
+            This will give you a public URL like:<br>
+            <code>https://nmpettus.github.io/BibleWisdom/</code>
+        </div>
+
+        <h2>Option 3: Download the Build</h2>
+        <div class="step">
+            <strong>Step 1:</strong> Download the entire <code>dist</code> folder from the repository
+        </div>
+        <div class="step">
+            <strong>Step 2:</strong> Run a local server in that folder:<br>
+            <code>npx serve dist</code><br>
+            or<br>
+            <code>python -m http.server 8000</code> (in the dist folder)
+        </div>
+
+        <h2>📋 What's in the App</h2>
+        <ul>
+            <li>Dashboard with health statistics</li>
+            <li>Timeline view with chronological events</li>
+            <li>Add/Edit/Delete health events</li>
+            <li>Import/Export JSON data</li>
+            <li>Mark important milestones</li>
+            <li>Fully responsive design</li>
+        </ul>
+
+        <h2>📁 Sample Data</h2>
+        <p>
+            The repository includes <code>sample-health-data.json</code> with 12 sample health events.
+            Use the Import button to load it!
+        </p>
+
+        <div class="important">
+            <strong>💡 Quick Start</strong><br>
+            The fastest way is to ask me in Claude Code:<br>
+            <em>"Deploy this to GitHub Pages so I can access it"</em>
+        </div>
+    </div>
+</body>
+</html>
