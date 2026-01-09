@@ -1,0 +1,150 @@
+{
+  "events": [
+    {
+      "id": "event_sample_001",
+      "date": "2024-01-15",
+      "title": "Annual Physical Exam",
+      "description": "Routine yearly checkup. All vitals normal. Blood pressure: 120/80, Weight: 165 lbs, Height: 5'8\"",
+      "category": "Appointment",
+      "isMilestone": false,
+      "tags": ["routine", "preventive care"],
+      "notes": "Doctor recommended continuing current exercise routine and diet.",
+      "createdAt": "2024-01-15T14:30:00Z",
+      "updatedAt": "2024-01-15T14:30:00Z"
+    },
+    {
+      "id": "event_sample_002",
+      "date": "2024-02-10",
+      "title": "Flu Shot",
+      "description": "Annual influenza vaccination administered. No adverse reactions.",
+      "category": "Vaccination",
+      "isMilestone": false,
+      "tags": ["vaccine", "preventive"],
+      "notes": "Pharmacy visit. Next flu shot due: Fall 2024",
+      "createdAt": "2024-02-10T10:15:00Z",
+      "updatedAt": "2024-02-10T10:15:00Z"
+    },
+    {
+      "id": "event_sample_003",
+      "date": "2024-03-22",
+      "title": "Blood Work - Complete Panel",
+      "description": "Comprehensive metabolic panel, lipid panel, and CBC. All results within normal range.",
+      "category": "Test",
+      "isMilestone": false,
+      "tags": ["lab work", "routine"],
+      "notes": "Cholesterol: 185 mg/dL, Glucose: 92 mg/dL. No action needed.",
+      "createdAt": "2024-03-22T08:00:00Z",
+      "updatedAt": "2024-03-22T08:00:00Z"
+    },
+    {
+      "id": "event_sample_004",
+      "date": "2024-05-05",
+      "title": "Minor Knee Injury",
+      "description": "Twisted knee during morning jog. Applied ice and compression. Mild swelling.",
+      "category": "Symptom",
+      "isMilestone": false,
+      "tags": ["injury", "knee", "sports"],
+      "notes": "RICE protocol followed. Pain subsided after 3 days.",
+      "createdAt": "2024-05-05T09:30:00Z",
+      "updatedAt": "2024-05-05T09:30:00Z"
+    },
+    {
+      "id": "event_sample_005",
+      "date": "2024-06-18",
+      "title": "Dental Cleaning",
+      "description": "Six-month dental checkup and cleaning. No cavities detected.",
+      "category": "Appointment",
+      "isMilestone": false,
+      "tags": ["dental", "preventive"],
+      "notes": "Dentist recommended flossing more regularly. Next visit: December 2024",
+      "createdAt": "2024-06-18T14:00:00Z",
+      "updatedAt": "2024-06-18T14:00:00Z"
+    },
+    {
+      "id": "event_sample_006",
+      "date": "2024-07-12",
+      "title": "Started Blood Pressure Medication",
+      "description": "Began taking Lisinopril 10mg daily for mild hypertension.",
+      "category": "Medication",
+      "isMilestone": true,
+      "tags": ["medication", "hypertension", "cardiology"],
+      "notes": "Prescription: Lisinopril 10mg, once daily in morning. Monitor BP at home weekly.",
+      "createdAt": "2024-07-12T11:00:00Z",
+      "updatedAt": "2024-07-12T11:00:00Z"
+    },
+    {
+      "id": "event_sample_007",
+      "date": "2024-08-08",
+      "title": "Cardiology Consultation",
+      "description": "Follow-up appointment with cardiologist regarding hypertension management. EKG performed - normal results.",
+      "category": "Appointment",
+      "isMilestone": false,
+      "tags": ["cardiology", "follow-up"],
+      "notes": "Continue current medication. Return in 3 months for follow-up.",
+      "createdAt": "2024-08-08T15:30:00Z",
+      "updatedAt": "2024-08-08T15:30:00Z"
+    },
+    {
+      "id": "event_sample_008",
+      "date": "2024-09-20",
+      "title": "Vision Exam",
+      "description": "Annual eye exam. Slight change in prescription for nearsightedness.",
+      "category": "Appointment",
+      "isMilestone": false,
+      "tags": ["vision", "ophthalmology"],
+      "notes": "New prescription: -2.25 OD, -2.50 OS. Ordered new glasses.",
+      "createdAt": "2024-09-20T13:00:00Z",
+      "updatedAt": "2024-09-20T13:00:00Z"
+    },
+    {
+      "id": "event_sample_009",
+      "date": "2024-10-15",
+      "title": "Cold/Upper Respiratory Infection",
+      "description": "Developed sore throat, runny nose, and mild cough. Rest and fluids.",
+      "category": "Symptom",
+      "isMilestone": false,
+      "tags": ["illness", "respiratory"],
+      "notes": "Symptoms lasted 5 days. No antibiotics needed. Over-the-counter cold medicine used.",
+      "createdAt": "2024-10-15T08:00:00Z",
+      "updatedAt": "2024-10-15T08:00:00Z"
+    },
+    {
+      "id": "event_sample_010",
+      "date": "2024-11-10",
+      "title": "Cardiology Follow-up",
+      "description": "Three-month follow-up for hypertension. BP readings excellent: 118/76.",
+      "category": "Follow-up",
+      "isMilestone": false,
+      "tags": ["cardiology", "hypertension"],
+      "notes": "Medication working well. Continue current dosage. Next visit: February 2025",
+      "createdAt": "2024-11-10T10:30:00Z",
+      "updatedAt": "2024-11-10T10:30:00Z"
+    },
+    {
+      "id": "event_sample_011",
+      "date": "2024-12-05",
+      "title": "Dermatology Screening",
+      "description": "Full body skin check for abnormal moles or lesions. All clear.",
+      "category": "Appointment",
+      "isMilestone": false,
+      "tags": ["dermatology", "preventive", "screening"],
+      "notes": "No concerning findings. Reminder to use sunscreen daily. Next screening: December 2025",
+      "createdAt": "2024-12-05T14:00:00Z",
+      "updatedAt": "2024-12-05T14:00:00Z"
+    },
+    {
+      "id": "event_sample_012",
+      "date": "2025-01-20",
+      "title": "Physical Therapy - Initial Evaluation",
+      "description": "Started PT for chronic lower back pain. Assessment completed, treatment plan developed.",
+      "category": "Procedure",
+      "isMilestone": true,
+      "tags": ["physical therapy", "back pain", "rehabilitation"],
+      "notes": "Plan: 2x weekly sessions for 6 weeks. Focus on core strengthening and flexibility.",
+      "createdAt": "2025-01-20T16:00:00Z",
+      "updatedAt": "2025-01-20T16:00:00Z"
+    }
+  ],
+  "exportDate": "2025-01-09T00:00:00Z",
+  "version": "1.0"
+}
